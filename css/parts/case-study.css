@@ -1,0 +1,205 @@
+/* Shared case-study page patterns: logo, hero, jump-to nav, sub-headers. */
+
+.cs-logo {
+  display: block;
+  width: 95px;
+  height: 110px;
+  border-radius: 9.5px;
+  overflow: hidden;
+  border: 0.95px solid var(--ink);
+  background: var(--accent);
+  margin-bottom: 40px;
+}
+.cs-logo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; mix-blend-mode: multiply; }
+
+/* --- hero --- */
+.cs-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.cs-hero__info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 729px;
+  max-width: 100%;
+}
+.cs-hero__heading {
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cs-hero__title {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+}
+.cs-hero__tagline {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.3;
+}
+.cs-hero__desc {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.45;
+  font-weight: 300;
+}
+.cs-hero__desc strong {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--violet);
+}
+.cs-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+.cs-hero__mockup {
+  flex-shrink: 0;
+  width: 349px;
+  height: 359px;
+}
+.cs-hero__mockup img { width: 100%; height: 100%; object-fit: contain; }
+
+/* --- jump-to nav --- */
+.cs-jumpto {
+  margin-bottom: 60px;
+}
+.cs-jumpto__label {
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  color: var(--ink-mute);
+  margin: 0 0 8px;
+}
+.cs-jumpto__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 32px;
+  justify-content: space-between;
+}
+.cs-jumpto__item {
+  font-family: var(--serif);
+  font-size: 22px;
+  display: inline-flex;
+  gap: 10px;
+  color: var(--ink);
+}
+.cs-jumpto__item em {
+  font-style: italic;
+  color: var(--violet);
+}
+/* match each jump-to number to its section's accent color */
+.cs-jumpto__item:nth-child(1) em { color: var(--violet); }
+.cs-jumpto__item:nth-child(2) em { color: var(--cherry); }
+.cs-jumpto__item:nth-child(3) em { color: var(--leaf); }
+.cs-jumpto__item:nth-child(4) em { color: var(--mustard); }
+.cs-jumpto__item:nth-child(5) em { color: var(--violet); }
+
+/* --- sub-section header (smaller than the homepage's block__title) --- */
+.cs-block {
+  margin-top: 96px;
+}
+.cs-block__head {
+  display: flex;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.cs-block__no {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 0.9;
+  color: var(--violet);
+}
+.cs-block__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 0.9;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 0;
+}
+.cs-block__title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--violet);
+}
+.cs-block__spark { font-size: 24px; margin-left: 4px; color: var(--violet); }
+.cs-block__rule {
+  flex: 1;
+  height: 1.4px;
+  background: var(--ink);
+}
+.cs-block p {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* --- credit/example rows (image group + caption) --- */
+.cs-credit-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+}
+.cs-credit-row__images {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.cs-credit-row__images img {
+  height: 181px;
+  width: auto;
+  object-fit: cover;
+}
+.cs-credit-row__text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.4;
+  flex: 1;
+}
+.cs-credit-row__text a { text-decoration: underline; }
+
+.cs-witch-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+}
+.cs-witch-row__images {
+  display: flex;
+  gap: 7px;
+  align-items: flex-end;
+  flex-shrink: 0;
+  border: 0.92px dashed #8a38f5;
+  border-radius: 3.7px;
+  padding: 9px 14px;
+}
+.cs-witch-row__images img { height: 167px; width: auto; object-fit: cover; }
+.cs-witch-row__text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.4;
+  flex: 1;
+}

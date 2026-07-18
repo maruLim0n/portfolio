@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shell Game, Reimagined — Ece Sağlam</title>
+  <meta name="description" content="Case study: a tarot-inspired reimagining of the classic shell game, prototyped entirely in Figma." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500&family=Afacad:wght@700&family=Pixelify+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IvyJournal&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/parts/shellgame-page.css" />
+</head>
+<body>
+  <div class="topbar" aria-hidden="true"></div>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <nav class="nav-bar">
+    <div class="nav-bar__links">
+      <a href="index.html#projects" class="nav-bar__link">projects</a>
+      <a href="index.html#playground" class="nav-bar__link">playground</a>
+      <a href="resume/ece-saglam-cv.pdf" target="_blank" rel="noopener" class="nav-bar__link">resumé</a>
+      <a href="#contact" class="nav-bar__link">contact</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <a href="index.html" class="cs-logo">
+      <img src="images/ece-avatar-face.png" alt="Ece Sağlam — back to homepage" />
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="cs-hero">
+      <div class="cs-hero__info">
+        <div class="cs-hero__heading">
+          <h1 class="cs-hero__title">Shell Game, Reimagined</h1>
+          <p class="cs-hero__tagline">A tarot spread meant only for the luckiest... Pick a card &amp; meet your fate!</p>
+        </div>
+        <p class="cs-hero__desc">The shell game is one of the oldest street cons in history: three shells, one ball, and a promise that you can beat the house if you just watch closely enough. Given the classic game as a brief, I chose to reframe it as a tarot reading. Instead of shells and a ball, three cards. Instead of a con, a moment of quiet fate. <strong>Shell Game, Reimagined</strong> turns a game of chance dressed as skill into one that leans into what the original was always really about: not the trick, but the reading of it.</p>
+        <div class="cs-hero__tags">
+          <span class="tag-pill">Game Design</span>
+          <span class="tag-pill">Pixel Art</span>
+          <span class="tag-pill">Interactive Prototype</span>
+          <span class="tag-pill">Figma</span>
+          <span class="tag-pill">Aseprite</span>
+        </div>
+      </div>
+      <div class="cs-hero__mockup">
+        <img src="images/sg-hero-mockup.png" alt="Shell Game, Reimagined shown on a laptop screen" />
+      </div>
+    </section>
+
+    <!-- ===== JUMP TO ===== -->
+    <nav class="cs-jumpto">
+      <p class="cs-jumpto__label">JUMP TO</p>
+      <div class="cs-jumpto__list">
+        <a href="#brief" class="cs-jumpto__item"><em>01</em> the brief</a>
+        <a href="#story" class="cs-jumpto__item"><em>02</em> the story</a>
+        <a href="#process" class="cs-jumpto__item"><em>03</em> the process</a>
+        <a href="#reflections" class="cs-jumpto__item"><em>04</em> reflections</a>
+        <a href="#playit" class="cs-jumpto__item"><em>05</em> play it!</a>
+      </div>
+    </nav>
+
+    <!-- ===== 01 THE BRIEF ===== -->
+    <section class="cs-block" id="brief">
+      <header class="cs-block__head">
+        <span class="cs-block__no">01</span>
+        <h2 class="cs-block__title">the br<em>i</em>ef<span class="cs-block__spark">✦</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <div class="sg-brief-content">
+        <div class="sg-brief-content__text">
+          <p>This was a prototyping-unit assignment from my UX/UI bootcamp: reimagine the classic shell game. We were tasked with recreating the shell game with Figma prototype and create a story around it. The assignment required nine fully working outcomes (three starting positions × three prizes), with no predictable pattern.</p>
+        </div>
+        <div class="sg-brief-how">
+          <div class="sg-brief-how__shot">
+            <img src="images/sg-shellgame-ref.png" alt="Reference photo of the classic shell game" />
+          </div>
+          <div class="sg-brief-how__qmark">
+            <span>?</span>
+            <img src="images/sg-arrow-qmark.svg" alt="" aria-hidden="true" />
+          </div>
+          <img class="sg-brief-how__figma" src="images/sg-figma-logo.svg" alt="Figma logo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 THE STORY ===== -->
+    <section class="cs-block" id="story">
+      <header class="cs-block__head">
+        <span class="cs-block__no" style="color:var(--cherry);">02</span>
+        <h2 class="cs-block__title">the st<em style="color:var(--cherry);">o</em>ry<span class="cs-block__spark" style="color:var(--cherry);">✶</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+      <p>A witch invites the player to a round of shell game and explains the rules. Rather than a coin, the player gets to pick the wager among three things people gamble on: money, love, or power, each represented by its own tarot card: the Ten of Pentacles, the Lovers, the Emperor, respectively. She shuffles three face-down cards; the player has to track and find their card. Guess wrong, and instead of the picked card, either the Devil or Death is turned over. The witch grants two more chances. But every wrong guess raises the stakes, and the cards she turns over don't get any kinder.</p>
+    </section>
+
+    <!-- ===== 03 THE PROCESS ===== -->
+    <section class="cs-block" id="process">
+      <header class="cs-block__head">
+        <span class="cs-block__no" style="color:var(--leaf);">03</span>
+        <h2 class="cs-block__title">the proc<em style="color:var(--leaf);">e</em>ss<span class="cs-block__spark" style="color:var(--leaf);">✧</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <div class="sg-process-content">
+        <p>When I first received the brief, I knew I wanted to do something with cards instead of shells. Having read Tarot for fun in the past, using Tarot cards felt like a natural next step, with a witch leading the game.</p>
+
+        <div class="cs-credit-row">
+          <div class="cs-credit-row__images">
+            <img src="images/sg-card-lovers.png" alt="The Lovers tarot card" />
+            <img src="images/sg-card-death.png" alt="Death tarot card" />
+            <img src="images/sg-card-emperor.png" alt="The Emperor tarot card" />
+            <img src="images/sg-card-devil.png" alt="The Devil tarot card" />
+            <img src="images/sg-card-pentacles.png" alt="Ten of Pentacles tarot card" />
+          </div>
+          <p class="cs-credit-row__text">For the Tarot cards, I used a pixel artist's pixel Tarot deck assets. Check out their portfolio → <a href="https://grijzelucht.com/" target="_blank" rel="noopener">grijzelucht.com</a> + <a href="https://grijzelucht.itch.io/" target="_blank" rel="noopener">grijzelucht.itch.io</a></p>
+        </div>
+
+        <div class="cs-witch-row">
+          <div class="cs-witch-row__images">
+            <img src="images/sg-witch-normal.png" alt="Witch pixel art — normal expression" />
+            <img src="images/sg-witch-cute.png" alt="Witch pixel art — cute expression" />
+            <img src="images/sg-witch-scary.png" alt="Witch pixel art — scary expression" />
+            <img src="images/sg-witch-sad.png" alt="Witch pixel art — sad expression" />
+          </div>
+          <p class="cs-witch-row__text">This was also my first time working with Aseprite. While it's not the most polished pixel art, I find this medium forgiving enough that I could get away with it. The witch's face carries the tone I wanted for the story, and I had a lot of fun creating her.</p>
+        </div>
+
+        <div class="sg-prelude">
+          <p>The nine required outcomes (three starting positions, three possible prizes) needed a reason to exist inside the fiction. So, tying each prize to its own tarot card (the Ten of Pentacles for money, the Lovers for love, the Emperor for power) gave every outcome its own identity instead of three interchangeable near-misses.</p>
+          <img src="images/sg-prelude.png" alt="Screenshot of the witch offering the player a choice between money, love, and power" />
+        </div>
+
+        <div class="sg-shuffle-gif-row">
+          <p>I created a separate shuffle for each possible ending. Every one of the nine outcomes was hand-built as its own sequence of static frames: each shuffle position drawn out individually and wired together with Figma's click-through prototyping and Smart Animate to fake the motion. It's brute-force, not clever, but every path plays correctly.</p>
+          <img src="images/sg-shuffle.gif" alt="Animated GIF of the shuffle sequence being built in Figma" />
+        </div>
+
+        <div class="sg-predictable">
+          <div class="sg-predictable-text">
+            <p>The "no predictable pattern" requirement is also where the witch came in. Instead of a generic three-lives counter, she offers the player two more chances herself, one at a time, so the retry logic lives inside the story instead of sitting on top of it as a UI element. It let the required unpredictability read as her decision.</p>
+            <p>To be precise, a player tracking The Lovers card has a 1-in-3 chance of finding it on any single guess, assuming they lost track of the shuffle.</p>
+            <p>I designed it backwards, in a sense: since the chosen card always ends up left, middle, or right, I built a separate shuffle sequence for each of those three final positions for each wager card. If the player misses on the first try, the next attempt's shuffle is built so the card lands somewhere different: left or right, never the same spot twice in a row.</p>
+          </div>
+
+          <div class="sg-shuffles">
+            <div class="sg-shuffle">
+              <p class="sg-shuffle__label">1st shuffle</p>
+              <div class="sg-shuffle__row">
+                <img src="images/sg-card-back.png" alt="Face-down card" />
+                <img src="images/sg-card-back.png" alt="Face-down card" />
+                <img src="images/sg-card-back.png" alt="Face-down card" />
+              </div>
+              <span class="sg-shuffle__arrow">&gt;</span>
+              <div class="sg-shuffle__row sg-shuffle__row--result">
+                <img src="images/sg-card-devil.png" alt="The Devil" />
+                <img class="is-target" src="images/sg-card-lovers.png" alt="The Lovers (target card)" />
+                <img src="images/sg-card-death.png" alt="Death" />
+              </div>
+            </div>
+            <div class="sg-shuffle">
+              <p class="sg-shuffle__label">2nd shuffle</p>
+              <div class="sg-shuffle__row">
+                <img src="images/sg-card-back.png" alt="Face-down card" />
+                <img src="images/sg-card-back.png" alt="Face-down card" />
+                <img src="images/sg-card-back.png" alt="Face-down card" />
+              </div>
+              <span class="sg-shuffle__arrow">&gt;</span>
+              <div class="sg-shuffle__row sg-shuffle__row--result">
+                <img class="is-target" src="images/sg-card-lovers.png" alt="The Lovers (target card)" />
+                <img src="images/sg-card-devil.png" alt="The Devil" />
+                <img src="images/sg-card-death.png" alt="Death" />
+              </div>
+            </div>
+            <div class="sg-shuffle">
+              <p class="sg-shuffle__label">3rd shuffle</p>
+              <div class="sg-shuffle__row">
+                <img src="images/sg-card-back.png" alt="Face-down card" />
+                <img src="images/sg-card-back.png" alt="Face-down card" />
+                <img src="images/sg-card-back.png" alt="Face-down card" />
+              </div>
+              <span class="sg-shuffle__arrow">&gt;</span>
+              <div class="sg-shuffle__row sg-shuffle__row--result">
+                <img src="images/sg-card-devil.png" alt="The Devil" />
+                <img src="images/sg-card-death.png" alt="Death" />
+                <img class="is-target" src="images/sg-card-lovers.png" alt="The Lovers (target card)" />
+              </div>
+            </div>
+          </div>
+
+          <p>It's not truly random — the brief technically asked for that — but it's as close as I could get by hand, without writing any actual randomization logic.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 REFLECTIONS ===== -->
+    <section class="cs-block" id="reflections">
+      <header class="cs-block__head">
+        <span class="cs-block__no" style="color:var(--mustard);">04</span>
+        <h2 class="cs-block__title">refl<em style="color:var(--mustard);">e</em>ctions<span class="cs-block__spark" style="color:var(--mustard);">✦</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+      <p>Building nine branching sequences as hand-duplicated frames is not the smartest, quickest, or most effective way to prototype something like this — it's brute force, and it shows in how long the file is. But it got the job done, every path plays, nothing broke. I'm currently building an upgraded version that handles the branching logic properly instead of drawing every possibility by hand. Nonetheless, this was a fun mini game to design!</p>
+    </section>
+
+    <!-- ===== 05 PLAY IT ===== -->
+    <section class="cs-block" id="playit">
+      <header class="cs-block__head">
+        <span class="cs-block__no">05</span>
+        <h2 class="cs-block__title">pl<em>a</em>y it!<span class="cs-block__spark">✦</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+      <div class="sg-playit">
+        <p>placeholder for the game prototype</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="block contact" id="contact" data-tone="violet">
+      <header class="block__head">
+        <h2 class="block__title">con<em>t</em>act <span class="block__spark">✦</span></h2>
+        <span class="block__rule"></span>
+      </header>
+
+      <div class="contact__row">
+        <p class="contact__prompt">If you have any thoughts on my project or would like to collaborate, let's chat!</p>
+        <div class="contact__options">
+          <div class="contact__pills">
+            <button class="contact-pill js-copy-email" data-email="ecesa.design@gmail.com">
+              <span>ecesa.design@gmail.com</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11C21 10.4477 20.5523 10 20 10H11C10.4477 10 10 10.4477 10 11V20C10 20.5523 10.4477 21 11 21H20C20.5523 21 21 20.5523 21 20V11ZM14 5V4C14 3.73478 13.8946 3.48051 13.707 3.29297C13.5195 3.10543 13.2652 3 13 3H4C3.73478 3 3.4805 3.10543 3.29297 3.29297C3.10543 3.4805 3 3.73478 3 4V13C3 13.2652 3.10543 13.5195 3.29297 13.707C3.48051 13.8946 3.73478 14 4 14H5C5.55228 14 6 14.4477 6 15C6 15.5523 5.55228 16 5 16H4C3.20435 16 2.44151 15.6837 1.87891 15.1211C1.3163 14.5585 1 13.7956 1 13V4C1 3.20435 1.3163 2.44152 1.87891 1.87891C2.44152 1.3163 3.20435 1 4 1H13C13.7956 1 14.5585 1.3163 15.1211 1.87891C15.6837 2.44151 16 3.20435 16 4V5C16 5.55228 15.5523 6 15 6C14.4477 6 14 5.55228 14 5ZM23 20C23 21.6569 21.6569 23 20 23H11C9.34315 23 8 21.6569 8 20V11C8 9.34315 9.34315 8 11 8H20C21.6569 8 23 9.34315 23 11V20Z" fill="currentColor"/></svg>
+            </button>
+            <a class="contact-pill" href="https://www.linkedin.com/in/ece-saglam/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="contact-pill" href="https://behance.net/ecesa" target="_blank" rel="noopener">
+              <span>Behance</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 19V8C2 7.20435 2.3163 6.44152 2.87891 5.87891C3.44152 5.3163 4.20435 5 5 5H11C11.5523 5 12 5.44772 12 6C12 6.55228 11.5523 7 11 7H5C4.73478 7 4.4805 7.10543 4.29297 7.29297C4.10543 7.4805 4 7.73478 4 8V19C4 19.2652 4.10543 19.5195 4.29297 19.707C4.48051 19.8946 4.73478 20 5 20H16C16.2652 20 16.5195 19.8946 16.707 19.707C16.8946 19.5195 17 19.2652 17 19V13C17 12.4477 17.4477 12 18 12C18.5523 12 19 12.4477 19 13V19C19 19.7957 18.6837 20.5585 18.1211 21.1211C17.5585 21.6837 16.7956 22 16 22H5C4.20435 22 3.44151 21.6837 2.87891 21.1211C2.3163 20.5585 2 19.7956 2 19ZM22 9C22 9.55228 21.5523 10 21 10C20.4477 10 20 9.55228 20 9V5.41406L10.707 14.707C10.3165 15.0976 9.68349 15.0976 9.29297 14.707C8.90244 14.3165 8.90244 13.6835 9.29297 13.293L18.5859 4H15C14.4477 4 14 3.55228 14 3C14 2.44772 14.4477 2 15 2H21C21.5523 2 22 2.44772 22 3V9Z" fill="currentColor"/></svg>
+            </a>
+          </div>
+          <span class="contact__note">say hi :)</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>© 2026 Ece Sağlam · made slowly, on purpose</span>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">copied ✦</div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

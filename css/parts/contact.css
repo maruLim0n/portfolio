@@ -1,0 +1,56 @@
+/* Contact block on the homepage. */
+
+.contact {
+  position: relative;
+}
+.contact__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.contact__prompt {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 24px;
+  max-width: 320px;
+}
+.contact__options {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.contact__pills {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border: 1.4px solid var(--ink);
+  border-radius: 999px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink);
+  background: transparent;
+  transition: background .25s var(--ease), color .25s var(--ease), box-shadow .25s var(--ease);
+}
+.contact-pill:hover {
+  background: var(--accent);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.contact-pill svg { width: 24px; height: 24px; }
+.contact-pill.is-copied { background: var(--cherry); color: var(--cream); }
+
+.contact__note {
+  font-family: var(--script);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--cherry);
+  transform: rotate(4deg);
+  white-space: nowrap;
+}

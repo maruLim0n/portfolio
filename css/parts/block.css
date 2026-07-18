@@ -1,0 +1,87 @@
+/* Section block scaffold: header (title + rule + tag) and reveal-on-scroll. */
+
+.block {
+  margin-top: 96px;
+  scroll-margin-top: 110px;
+  position: relative;
+}
+.block__head {
+  display: flex;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 36px;
+  position: relative;
+}
+
+/* --- title --- */
+.block__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(48px, 6.2vw, 90px);
+  line-height: .9;
+  letter-spacing: -.015em;
+  margin: 0;
+  color: var(--ink);
+  /* reactive: --vskew set by js/modules/title-skew.js */
+  transform: skewY(var(--vskew, 0deg));
+  transition: transform .25s var(--ease), opacity .8s var(--ease);
+  transform-origin: left bottom;
+  opacity: 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 14px;
+  position: relative;
+}
+.block.is-in .block__title { opacity: 1; }
+
+/* italic accent letter inside the title (per-tone color) */
+.block__title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--violet); /* default */
+}
+.block[data-tone="violet"]  .block__title em { color: var(--violet); }
+.block[data-tone="cherry"]  .block__title em { color: var(--cherry); }
+.block[data-tone="leaf"]    .block__title em { color: var(--leaf); }
+.block[data-tone="mustard"] .block__title em { color: var(--mustard); }
+
+/* sparkle next to the title */
+.block__spark {
+  font-size: clamp(18px, 2vw, 28px);
+  display: inline-block;
+  transform: translateY(-.5em);
+  color: var(--violet);
+}
+.block[data-tone="cherry"]  .block__spark { color: var(--cherry); }
+.block[data-tone="leaf"]    .block__spark { color: var(--leaf); }
+.block[data-tone="mustard"] .block__spark { color: var(--mustard); }
+
+/* --- horizontal rule (draws in on reveal) --- */
+.block__rule {
+  flex: 1;
+  height: 1.4px;
+  background: var(--ink);
+  margin-bottom: 24px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1s var(--ease);
+}
+.block.is-in .block__rule { transform: scaleX(1); }
+
+/* --- numbered tag chip --- */
+.block__tag {
+  font-family: var(--ui);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  background: var(--accent);
+  border: 1px solid var(--ink);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.block[data-tone="cherry"]  .block__tag { background: var(--red); }
+.block[data-tone="leaf"]    .block__tag { background: var(--accent); }
+.block[data-tone="mustard"] .block__tag { background: var(--mustard); }

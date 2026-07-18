@@ -1,0 +1,124 @@
+/* Shell Game case study — page-specific content blocks. */
+
+.sg-brief-content {
+  display: flex;
+  gap: 57px;
+  align-items: flex-start;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.sg-brief-content__text { width: 369px; max-width: 100%; }
+.sg-brief-how {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+.sg-brief-how__shot {
+  border: 2px dashed var(--violet);
+  border-radius: 10px;
+  padding: 18px;
+  width: 355px;
+}
+.sg-brief-how__shot img { width: 100%; height: auto; display: block; object-fit: cover; }
+.sg-brief-how__qmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+}
+.sg-brief-how__qmark span { font-family: var(--serif); font-size: 30px; }
+.sg-brief-how__qmark img { width: 66px; max-width: none; height: 14.7px; }
+.sg-brief-how__figma { width: 90px; height: 90px; flex-shrink: 0; }
+
+.sg-process-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.sg-prelude { text-align: center; }
+.sg-prelude img {
+  width: 669px;
+  max-width: 100%;
+  height: auto;
+  margin: 16px auto 0;
+  border-radius: 4px;
+  display: block;
+}
+
+.sg-shuffle-gif-row {
+  display: flex;
+  gap: 41px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sg-shuffle-gif-row p { flex: 1 1 300px; }
+.sg-shuffle-gif-row img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--ink-soft);
+  flex-shrink: 0;
+}
+
+.sg-predictable {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sg-predictable-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sg-shuffles {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.sg-shuffle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 251px;
+}
+.sg-shuffle__label {
+  font-family: "Pixelify Sans", var(--ui);
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0 8px;
+}
+.sg-shuffle__row { display: flex; gap: 16px; }
+.sg-shuffle__row img { width: 73px; height: 101px; object-fit: cover; image-rendering: pixelated; }
+.sg-shuffle__arrow { font-family: "Pixelify Sans", var(--ui); font-size: 22px; transform: rotate(90deg); display: inline-block; }
+.sg-shuffle__row--result img.is-target {
+  box-shadow: 0 0 12px 3px rgba(187, 230, 126, 0.87);
+}
+
+.sg-playit {
+  background: #d9d9d9;
+  border-radius: 4px;
+  height: 463px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+.sg-playit p {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--ink-mute);
+}
+
+/* pixel-art assets: keep crisp edges when scaled up, don't let the browser smooth/blur them */
+.cs-credit-row__images img,
+.cs-witch-row__images img {
+  image-rendering: pixelated;
+}

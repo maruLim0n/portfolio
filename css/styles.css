@@ -1,0 +1,22 @@
+/* ============================================================
+   Ece Sağlam — Portfolio (Figma redesign)
+   Editorial / journal aesthetic. Color treated like print.
+
+   Entry stylesheet. Each part lives in css/parts/ and is
+   responsible for one logical unit. Source order matters:
+   tokens → base → chrome → stars → component → page parts → responsive.
+   ============================================================ */
+
+@import url("./parts/tokens.css");
+@import url("./parts/base.css");
+@import url("./parts/chrome.css");
+@import url("./parts/stars.css");
+@import url("./parts/avatar.css");
+@import url("./parts/hello.css");
+@import url("./parts/marginalia.css");
+@import url("./parts/block.css");
+@import url("./parts/projects.css");
+@import url("./parts/playground-preview.css");
+@import url("./parts/contact.css");
+@import url("./parts/case-study.css");
+@import url("./parts/responsive.css");

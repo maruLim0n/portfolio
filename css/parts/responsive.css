@@ -1,0 +1,39 @@
+/* Breakpoints. Keep responsive overrides in one place. */
+
+@media (max-width: 1080px) {
+  .page { padding: 80px 56px 60px; }
+}
+
+@media (max-width: 760px) {
+  .page { padding: 64px 24px 48px; }
+
+  .hello { grid-template-columns: 1fr; gap: 28px; margin-bottom: 60px; }
+  .hello--sub { grid-template-columns: 1fr; }
+  .avatar-stack { margin: 0 auto; }
+
+  .intro { text-align: left; padding-bottom: 0; }
+  .intro__name { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+
+  .roles li { justify-content: flex-start; flex-wrap: wrap; padding-left: 22px; }
+  .roles li::before { left: 0; }
+
+  .deco--star { left: auto; right: 16px; top: 16px; }
+  .deco--blot { left: auto; right: 40px; top: 240px; }
+
+  .about, .prose { text-align: left; }
+  .about__lead::first-letter {
+    float: left;
+    margin: -.05em .12em -.1em 0;
+  }
+
+  .block { margin-top: 64px; }
+  .play { grid-template-columns: 1fr; column-gap: 0; }
+  .proj { grid-template-columns: 40px 1fr; gap: 12px 18px; }
+  .proj__name, .proj__tag, .proj__meta, .proj__cta { grid-column: 2; }
+  .cv__row { grid-template-columns: 1fr; gap: 4px; }
+
+  .topbar::before { display: none; }
+  .margin-note:not(.margin-note--inline) { display: none; }
+  .arrow { display: none; }
+  .avatar-stamp { transform: rotate(8deg) scale(.75); top: -6px; right: -8px; }
+}

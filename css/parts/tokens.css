@@ -1,0 +1,37 @@
+/* Design tokens — palette, type, motion. */
+
+:root {
+  /* paper */
+  --cream:    #F2ECE3;
+  --cream-2:  #ECE3D4;
+
+  /* accents */
+  --accent:   #CFD26E;  /* chartreuse — Figma yellow-green */
+  --mustard:  #E0A93B;
+  --red:      #E37070;  /* paint blot */
+  --cherry:   #C8443D;  /* editorial ink */
+  --violet:   #5C37D6;  /* primary star */
+  --lilac:    #B79BE6;
+  --sky:      #9DC4D9;
+  --leaf:     #6B9F5E;
+
+  /* card / tag accents */
+  --card-tag: #9979D4;
+
+  /* ink */
+  --ink:      #000;
+  --ink-soft: #1c1c1c;
+  --ink-mute: #A8A1A1;
+  --line:     rgba(0, 0, 0, .55);
+  --line-soft:rgba(0, 0, 0, .18);
+
+  /* type */
+  --serif:  "IvyJournal", "Cormorant Garamond", "Apple Garamond", Garamond, Georgia, serif;
+  --script: "Caveat", "Reenie Beanie", "Marker Felt", cursive;
+  --ui:     "Inter", system-ui, -apple-system, sans-serif;
+  --nav:    "Cabinet Grotesk", "Inter", system-ui, sans-serif;
+  --tag-ui: "Afacad", "Inter", system-ui, sans-serif;
+
+  /* motion */
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}

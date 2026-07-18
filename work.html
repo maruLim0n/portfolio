@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>intueative — Ece Sağlam</title>
+  <meta name="description" content="Case study: intueative, a concept food journaling app for people practicing intuitive eating." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500&family=Afacad:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IvyJournal&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500&family=agrandir@700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/parts/intueative-page.css" />
+</head>
+<body>
+  <div class="topbar" aria-hidden="true"></div>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <nav class="nav-bar">
+    <div class="nav-bar__links">
+      <a href="index.html#projects" class="nav-bar__link">projects</a>
+      <a href="index.html#playground" class="nav-bar__link">playground</a>
+      <a href="resume/ece-saglam-cv.pdf" target="_blank" rel="noopener" class="nav-bar__link">resumé</a>
+      <a href="#contact" class="nav-bar__link">contact</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <a href="index.html" class="cs-logo">
+      <img src="images/ece-avatar-face.png" alt="Ece Sağlam — back to homepage" />
+    </a>
+
+    <!-- ===== HERO ===== -->
+    <section class="cs-hero">
+      <div class="cs-hero__info">
+        <div class="cs-hero__heading">
+          <h1 class="cs-hero__title">intueative <span class="cs-hero__tagline" style="display:inline; font-size:28px; font-style:italic; color:var(--violet);">(in-tu-ee-tiv)</span></h1>
+          <p class="cs-hero__tagline">an intuitive app for intuitive eaters!</p>
+        </div>
+        <p class="cs-hero__desc">Most food journaling apps are built around the very things intuitive eating asks people to unlearn: <strong>calorie counting, weight tracking,</strong> and <strong>food morality</strong>. Even apps that brand themselves as "intuitive" still heavily <strong>rely on diet-culture mechanics</strong>. intueative is a concept app designed for <strong>what intuitive eaters actually need to support their process</strong>, not sabotage it.</p>
+        <div class="cs-hero__tags">
+          <span class="tag-pill">UI/UX Design</span>
+          <span class="tag-pill">User Research</span>
+          <span class="tag-pill">Mobile</span>
+          <span class="tag-pill">Concept Project</span>
+          <span class="tag-pill">Figma</span>
+          <span class="tag-pill">Airtable</span>
+        </div>
+      </div>
+      <div class="cs-hero__mockup">
+        <img src="images/int-hero-mockup.png" alt="Intueative app shown on two phone mockups" />
+      </div>
+    </section>
+
+    <!-- ===== JUMP TO ===== -->
+    <nav class="cs-jumpto">
+      <p class="cs-jumpto__label">JUMP TO</p>
+      <div class="cs-jumpto__grid">
+        <div class="cs-jumpto__col">
+          <a href="#overview" class="cs-jumpto__item"><em style="color:var(--violet);">01</em> project overview</a>
+          <a href="#analysis" class="cs-jumpto__item"><em style="color:var(--cherry);">06</em> analysis</a>
+        </div>
+        <div class="cs-jumpto__col">
+          <a href="#intuitive-eating" class="cs-jumpto__item"><em style="color:var(--cherry);">02</em> what is intuitive eating?</a>
+          <a href="#insights" class="cs-jumpto__item"><em style="color:var(--leaf);">07</em> insights &amp; implications</a>
+        </div>
+        <div class="cs-jumpto__col">
+          <a href="#why-this-project" class="cs-jumpto__item"><em style="color:var(--leaf);">03</em> why this project</a>
+          <a href="#color-palette" class="cs-jumpto__item"><em style="color:var(--mustard);">08</em> color palette</a>
+        </div>
+        <div class="cs-jumpto__col">
+          <a href="#problem-statement" class="cs-jumpto__item"><em style="color:var(--mustard);">04</em> problem statement</a>
+          <a href="#solution" class="cs-jumpto__item"><em style="color:var(--violet);">09</em> the solution</a>
+        </div>
+        <div class="cs-jumpto__col">
+          <a href="#research-method" class="cs-jumpto__item"><em style="color:var(--violet);">05</em> research method</a>
+          <a href="#reflections" class="cs-jumpto__item"><em style="color:var(--cherry);">10</em> reflections</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== 01 PROJECT OVERVIEW ===== -->
+    <section class="cs-block" id="overview">
+      <header class="cs-block__head">
+        <span class="cs-block__no">01</span>
+        <h2 class="cs-block__title">pro<em>j</em>ect overview<span class="cs-block__spark">✦</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <div class="cs-subprose">
+        <div class="cs-subprose__item">
+          <h3>What is intuitive eating?</h3>
+          <p>A non-diet, evidence-based approach to eating designed to help people heal and normalize their relationships with food and bodies.</p>
+        </div>
+        <div class="cs-subprose__item">
+          <h3>The problem</h3>
+          <p>Most food journaling apps were built for the opposite worldview: calorie counters, weight trackers, food labels, and streak mechanics. Even apps that brand themselves as "intuitive" still rely on these diet-culture mechanics. <strong>People practicing IE are left without a digital tool that meets them where they actually are.</strong></p>
+        </div>
+        <div class="cs-subprose__item">
+          <h3>The solution</h3>
+          <p>intueative — a mobile app concept designed entirely around <strong>what intuitive eaters actually need</strong>: a friction-free food journal, a compassionate companion, an emotion regulation toolkit, and anti-diet achievements. Every feature is grounded in user research and behavioral science.</p>
+        </div>
+      </div>
+
+      <!-- project timeline (gantt chart) -->
+      <img src="images/int-timeline.png" alt="Project timeline: an 8-week Gantt chart showing netnography, user interviews, affinity mapping, feature ideation, information architecture, design system development, and UI design + prototyping" style="width:100%; height:auto; margin-top:8px;" />
+    </section>
+
+    <!-- ===== 02 WHAT IS INTUITIVE EATING ===== -->
+    <section class="cs-block" id="intuitive-eating">
+      <header class="cs-block__head">
+        <span class="cs-block__no" style="color:var(--cherry);">02</span>
+        <h2 class="cs-block__title">int<em style="color:var(--cherry);">u</em>itive eating?<span class="cs-block__spark" style="color:var(--cherry);">✶</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <p style="margin-bottom:32px;">Intuitive eating is an <strong style="font-weight:700; font-style:normal; color:var(--ink);">evidence-based, non-diet nutrition framework</strong> developed in 1995 by registered dietitians Evelyn Tribole and Elyse Resch. It is built on 10 principles that ask people to <strong style="font-weight:700; font-style:normal; color:var(--ink);">reject diet culture, honor hunger and fullness, make peace with food, and rebuild trust with their bodies.</strong></p>
+
+      <div class="int-list-cols">
+        <div class="int-list-col">
+          <span class="int-list-col__label">WHAT IT IS</span>
+          <div class="int-list-item is-yes"><span class="mark">✧</span><span>A non-diet approach to eating</span></div>
+          <div class="int-list-item is-yes"><span class="mark">✧</span><span>Helps heal relationship with food</span></div>
+          <div class="int-list-item is-yes"><span class="mark">✧</span><span>Reconstructing body wisdom</span></div>
+          <div class="int-list-item is-yes"><span class="mark">✧</span><span>Eating without guilt or moral judgment</span></div>
+          <div class="int-list-item is-yes"><span class="mark">✧</span><span>Evidence-based &amp; developed by registered dietitians</span></div>
+        </div>
+        <div class="int-list-col">
+          <span class="int-list-col__label">WHAT IT IS NOT</span>
+          <div class="int-list-item is-not"><span class="mark">✶</span><span>Another diet in disguise</span></div>
+          <div class="int-list-item is-not"><span class="mark">✶</span><span>&ldquo;Eat whatever, whenever&rdquo; without awareness</span></div>
+          <div class="int-list-item is-not"><span class="mark">✶</span><span>A weight management tool</span></div>
+          <div class="int-list-item is-not"><span class="mark">✶</span><span>Ignoring nutrition or health</span></div>
+          <div class="int-list-item is-not"><span class="mark">✶</span><span>A wellness trend</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 03 WHY THIS PROJECT ===== -->
+    <section class="cs-block" id="why-this-project">
+      <header class="cs-block__head">
+        <span class="cs-block__no" style="color:var(--leaf);">03</span>
+        <h2 class="cs-block__title">why t<em style="color:var(--leaf);">h</em>is project<span class="cs-block__spark" style="color:var(--leaf);">✧</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <p>In intuitive eating, food journaling is one of the first steps toward rebuilding body awareness. People practicing IE — usually those working with a dietitian — log what they ate, when, and how it felt, in order to slowly relearn their own hunger, fullness, and satisfaction signals.</p>
+        <div>
+          <p style="margin-bottom:8px;">When I first started practicing IE, I struggled a lot with food journaling, but...</p>
+          <ul class="int-why-list">
+            <li>Is this common among other people practicing intuitive eating?</li>
+            <li>Do they face other problems? (💡 Spoiler: Yes!)</li>
+            <li>What challenges do intuitive eaters face?</li>
+            <li>What support do they need the most?</li>
+          </ul>
+        </div>
+        <p style="font-weight:700;">Research Question: What are the pain points in users' intuitive eating journey?</p>
+      </div>
+    </section>
+
+    <!-- ===== 04 PROBLEM STATEMENT ===== -->
+    <section class="cs-block" id="problem-statement">
+      <header class="cs-block__head">
+        <span class="cs-block__no" style="color:var(--mustard);">04</span>
+        <h2 class="cs-block__title">pro<em style="color:var(--mustard);">b</em>lem statement<span class="cs-block__spark" style="color:var(--mustard);">✦</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <div class="int-problem-top">
+        <p class="int-problem-top__text">I audited the meal tracking and intuitive eating apps available at the time of research. Almost all of them undermined the very principles they claimed to support. The pattern was consistent: existing apps borrow the language of intuitive eating for marketing while <strong>their mechanics reproduce diet culture.</strong> Others, while making no claim to be an IE app, directly <strong>feed into the very mindset users came to IE to unlearn.</strong></p>
+        <ul class="int-ps-list">
+          <li><span>❌</span><span>Calorie counters → triggering</span></li>
+          <li><span>❌</span><span>Diet apps disguised as "wellness"</span></li>
+          <li><span>❌</span><span>Generic tracking tools → no IE-specific support</span></li>
+        </ul>
+      </div>
+
+      <img src="images/int-competitor-frame.png" alt="Competitor teardown of MyTummy, MyFitnessPal (annotated 'aka EatingDisorderPal'), BitePal (annotated 'beat binge eating by tracking calories?!'), and Eating Buddy, with hand-drawn notes pointing out diet-culture mechanics like food-labeling" style="width:100%; height:auto;" />
+    </section>
+
+    <!-- ===== 05 RESEARCH METHOD ===== -->
+    <section class="cs-block" id="research-method">
+      <header class="cs-block__head">
+        <span class="cs-block__no">05</span>
+        <h2 class="cs-block__title">resear<em>c</em>h method<span class="cs-block__spark">✦</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <div style="display:flex; flex-direction:column; gap:32px;">
+
+        <div class="int-rm-section">
+          <div class="int-rm-title"><em>i.</em> <span>literature review</span></div>
+          <div class="int-rm-lit">
+            <div class="int-rm-lit__text int-rm-text">
+              <p>Before doing my own research, I looked at what others had already found.</p>
+              <p>I reviewed the existing literature on intuitive eating. The studies, both <strong>qualitative and quantitative</strong>, converged on a few consistent themes: IE is associated with better psychological health and body image, but learning it is hard: people practicing IE face <strong>persistent social pressure, internalized diet culture</strong>, and <strong>difficulty trusting their own bodily cues.</strong></p>
+              <p>Reading existing studies on IE let me refine the interview guide around documented friction points, and helped me hold my own intuitive eating practice at arm's length while I listened to others.</p>
+            </div>
+            <img src="images/int-articles-frame.png" alt="A fanned stack of six academic papers on intuitive eating and mindful eating research" style="width:350px; max-width:100%; height:auto; flex-shrink:0;" />
+          </div>
+        </div>
+
+        <div class="int-rm-section">
+          <div class="int-rm-title"><em>ii.</em> <span>netnography</span></div>
+          <div class="int-rm-text">
+            <p>I spent time observing intuitive eating communities online: Reddit threads, blog comment sections, and social media spaces where people practicing IE share their day-to-day struggles.</p>
+          </div>
+          <div class="int-netnography-sources">
+            <div class="int-reddit-crop" style="width:227px;">
+              <img src="images/int-reddit1.png" alt="r/intuitiveeating" style="height:356.84%; left:-6.67%; top:-16.84%; width:338.89%;" />
+            </div>
+            <div class="int-reddit-crop" style="width:258px;">
+              <img src="images/int-reddit2.png" alt="r/EDAnonymous" style="height:382.51%; left:-4.43%; top:-10.2%; width:268.46%;" />
+            </div>
+            <div class="int-reddit-crop" style="width:162px;">
+              <img src="images/int-reddit3.png" alt="r/loseit" style="height:340.81%; left:-10%; top:-75.86%; width:506.63%;" />
+            </div>
+            <div class="int-reddit-crop" style="width:165px;">
+              <img src="images/int-reddit4.png" alt="r/antidiet" style="height:369.75%; left:-6.57%; top:-11.08%; width:444.95%;" />
+            </div>
+          </div>
+          <div class="int-airtable">
+            <img src="images/int-airtable-ss.png" alt="Airtable spreadsheet of coded interview data" />
+          </div>
+          <p>Diet culture vocabulary kept reappearing. So did expressions of <strong style="font-weight:700; font-style:normal;">guilt, shame</strong>, and <strong style="font-weight:700; font-style:normal;">relief at finding a non-diet framework</strong>. These patterns informed the thematic foundation of my interview guide.</p>
+        </div>
+
+        <div class="int-rm-section">
+          <div class="int-rm-title"><em>iii.</em> <span>user interviews</span></div>
+          <p>Both the netnography findings and the existing literature shaped the interview guide consisting of 33 questions, organized into (tentative) thematic blocs:</p>
+          <ul class="int-interview-list">
+            <li><strong>Warm-up:</strong> How they discovered IE, their motivation, and where they felt they were in their journey</li>
+            <li><strong>Before &amp; after:</strong> How they made eating decisions before IE, and how they adapted</li>
+            <li><strong>Hunger &amp; fullness:</strong> How they experience physical cues, and whether they confuse physical with emotional hunger</li>
+            <li><strong>Challenges:</strong> What makes IE hard to sustain, and what they wished existed to make it easier</li>
+            <li><strong>Diet culture, body image &amp; relationship with food:</strong> Past dieting history, lingering diet behaviors, and how negative body image days affect their IE process</li>
+            <li><strong>Attitudes toward apps:</strong> How (and whether) they track meals, how tracking makes them feel, and what an ideal supportive tool would look like</li>
+          </ul>
+          <div class="int-sample-rows">
+            <div class="int-sample-row">
+              <span class="int-sample-row__label">WHO</span>
+              <span class="int-sample-row__what">7 participants · all female</span>
+              <span class="int-sample-row__where">20–39 yo, M ≈ 26.8</span>
+            </div>
+            <div class="int-sample-row">
+              <span class="int-sample-row__label">PRACTICING IE</span>
+              <span class="int-sample-row__what">2 mo – 1 yr</span>
+              <span class="int-sample-row__where">M ≈ 6.5 mo</span>
+            </div>
+          </div>
+          <p>I conducted 7 in-depth, semi-structured interviews (online, ~45–60m) with <strong style="font-weight:700; font-style:normal;">women actively practicing intuitive eating</strong> alongside a registered IE dietitian. Participants were recruited through a partnering IE dietitian, who shared the study with clients who had been practicing IE for at least two months. Each participant gave <strong style="font-weight:700; font-style:normal;">verbal informed consent</strong> before the interview began, including consent to be recorded for analysis purposes.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 06 ANALYSIS ===== -->
+    <section class="cs-block" id="analysis">
+      <header class="cs-block__head">
+        <span class="cs-block__no" style="color:var(--cherry);">06</span>
+        <h2 class="cs-block__title">ana<em style="color:var(--cherry);">l</em>ysis<span class="cs-block__spark" style="color:var(--cherry);">✶</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <p style="margin-bottom:32px;">I analyzed the interviews through a structured, bottom-up process. The analysis moved through three stages:</p>
+
+      <div class="int-analysis-flow" style="margin-bottom:32px;">
+        <span>raw data</span><span class="arrow">⟶</span><span>coding</span><span class="arrow">⟶</span><span>themes</span>
+      </div>
+
+      <div class="int-analysis-steps" style="margin-bottom:32px;">
+        <div class="int-analysis-step">
+          <span class="int-analysis-step__no">i.</span>
+          <div class="int-analysis-step__body">
+            <h4>raw data</h4>
+            <p>I went through every transcript and pulled out individual statements: specific thoughts, feelings, and experiences in participants' own words.</p>
+          </div>
+        </div>
+        <div class="int-analysis-step">
+          <span class="int-analysis-step__no">ii.</span>
+          <div class="int-analysis-step__body">
+            <h4>coding</h4>
+            <p>I tagged each statement with a first-level label by type: 🟡 Behavior, 🔴 Pain Point, 🟢 Win/Success, 🔵 Context, or 🟣 Emotion. This color-coded system made it possible to see, at a glance, where the struggles clustered and where the wins lived.</p>
+          </div>
+        </div>
+        <div class="int-analysis-step" style="border-bottom:none;">
+          <span class="int-analysis-step__no">iii.</span>
+          <div class="int-analysis-step__body">
+            <h4>themes</h4>
+            <p>I grouped related codes until patterns surfaced. 7 themes emerged.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="int-themes-grid" style="margin-bottom:32px;">
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>i.</em><span>body image</span></div><p>Body acceptance has grown, but negative-body-image days still derail the IE process.</p></div>
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>ii.</em><span>binge-restrict cycle</span></div><p>Old extremes have lessened, but stress and dissatisfaction can re-trigger them.</p></div>
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>iii.</em><span>journaling struggles</span></div><p>They know it helps, but find it hard to sustain without it feeling like surveillance.</p></div>
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>iv.</em><span>bodily cues</span></div><p>They can read their bodies now, but trusting and acting on those signals isn't automatic.</p></div>
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>v.</em><span>lack of social support</span></div><p>Loved ones don't understand IE, and their skepticism becomes a quiet pressure.</p></div>
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>vi.</em><span>diet mindset</span></div><p>Remnants of diet culture pull them back, even when they're committed.</p></div>
+        <div class="int-theme-card int-theme-card--wide"><div class="int-theme-card__label"><em>vii.</em><span>emotional irregularities + eating</span></div><p>Emotional eating hasn't disappeared; it's become more conscious.</p></div>
+      </div>
+
+      <p style="font-weight:700; color:var(--cherry); text-align:center; margin-bottom:16px;">These clusters then consolidated into the 5 core insights that shaped the entire product.</p>
+
+      <div class="int-quotes">
+        <div class="int-quote"><p>"I'd been out of touch with my body for so long that coming back together — or maybe meeting for the first time — was really hard."</p></div>
+        <div class="int-quote"><p>"[...] It makes me doubt my whole process. I feel unheard. Everyone being a part of diet culture pulls me back into it sometimes too."</p></div>
+        <div class="int-quote"><p>"I used to think food was just fuel for exercise. Now I can read it as a source of pleasure too."</p></div>
+        <div class="int-quote"><p>"Before intuitive eating, I was either on a diet or I wasn't — and when I wasn't, I ate until I couldn't anymore."</p></div>
+        <div class="int-quote"><p>"I still have negative body image days, but now I can also look at my body from a neutral place."</p></div>
+        <div class="int-quote"><p>"The food journal is the place where intuitive eating became most integrated into my life."</p></div>
+        <div class="int-quote"><p>"Emotional eating has been the story of my life. I always felt guilty. But now, when I eat emotionally, I know I'm doing it — and I do it anyway."</p></div>
+      </div>
+    </section>
+
+    <!-- ===== 07 INSIGHTS & IMPLICATIONS ===== -->
+    <section class="cs-block" id="insights">
+      <header class="cs-block__head">
+        <span class="cs-block__no" style="color:var(--leaf);">07</span>
+        <h2 class="cs-block__title">insi<em style="color:var(--leaf);">g</em>hts &amp; implications<span class="cs-block__spark" style="color:var(--leaf);">✧</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <div class="int-themes-grid" style="margin-bottom:32px;">
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>i.</em><span>body wisdom</span></div><p>Help users reconnect with hunger/fullness signals through education, celebration, and permission tools.</p></div>
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>ii.</em><span>vices &amp; virtues of journaling</span></div><p>Make tracking effortless, shame-free, and visually distinct from diet apps.</p></div>
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>iii.</em><span>emotion regulation via eating</span></div><p>Normalize food as a valid coping tool while expanding emotion regulation options.</p></div>
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>iv.</em><span>compassionate witness</span></div><p>Provide warm, non-judgmental support in vulnerable moments to build self-compassion.</p></div>
+        <div class="int-theme-card"><div class="int-theme-card__label"><em>v.</em><span>diet culture, the saboteur</span></div><p>Combat the internal "diet police" with a compassionate counter-voice and evidence-based reassurance.</p></div>
+        <div style="display:flex; align-items:flex-end; justify-content:center;">
+          <img src="images/int-luna-icon.png" alt="Luna heart mascot illustration" style="width:180px;" />
+        </div>
+      </div>
+
+      <p style="font-weight:700; color:var(--cherry); text-align:center;">These insights translated into concrete features by asking "How Might We" questions that turned each finding into a design opportunity.</p>
+    </section>
+
+    <!-- ===== 08 COLOR PALETTE ===== -->
+    <section class="cs-block" id="color-palette">
+      <header class="cs-block__head">
+        <span class="cs-block__no" style="color:var(--mustard);">08</span>
+        <h2 class="cs-block__title">color pa<em style="color:var(--mustard);">l</em>ette<span class="cs-block__spark" style="color:var(--mustard);">✦</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <p style="margin-bottom:24px;">Most diet and wellness apps lean on either clinical whites and blues, or aggressive brights designed to "motivate." Both undermine the intuitive eating experience — one feels sterile, the other punitive. I decided on a palette that sits between them:</p>
+
+      <div style="display:flex; flex-direction:column; gap:24px;">
+        <div class="int-palette-group">
+          <span class="int-palette-group__label">NEUTRALS</span>
+          <div class="int-palette-row">
+            <div class="int-swatches">
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#FBF8F4;"></div><span class="int-swatch__hex">#FBF8F4</span></div>
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#FCF1E1;"></div><span class="int-swatch__hex">#FCF1E1</span></div>
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#321607;"></div><span class="int-swatch__hex">#321607</span></div>
+            </div>
+            <p>Warm off-whites and deep brown. Used for backgrounds, surfaces, and primary text. The base is warm, never clinical.</p>
+          </div>
+        </div>
+        <div class="int-palette-group">
+          <span class="int-palette-group__label">PRIMARIES / PASTELS</span>
+          <div class="int-palette-row">
+            <div class="int-swatches">
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#CEDBDE;"></div><span class="int-swatch__hex">#CEDBDE</span></div>
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#FAD0CE;"></div><span class="int-swatch__hex">#FAD0CE</span></div>
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#D6D68C;"></div><span class="int-swatch__hex">#D6D68C</span></div>
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#D2B3F3;"></div><span class="int-swatch__hex">#D2B3F3</span></div>
+            </div>
+            <p>Four muted pastels that carry the emotional tone of the system. Soft &amp; non-overwhelming.</p>
+          </div>
+        </div>
+        <div class="int-palette-group">
+          <span class="int-palette-group__label">COMPLEMENTARIES / ACCENTS</span>
+          <div class="int-palette-row">
+            <div class="int-swatches">
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#3F5EB3;"></div><span class="int-swatch__hex">#3F5EB3</span></div>
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#CA5E59;"></div><span class="int-swatch__hex">#CA5E59</span></div>
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#8D8D2B;"></div><span class="int-swatch__hex">#8D8D2B</span></div>
+              <div class="int-swatch"><div class="int-swatch__chip" style="background:#532E7B;"></div><span class="int-swatch__hex">#532E7B</span></div>
+            </div>
+            <p>Darker, saturated versions of each pastel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 09 THE SOLUTION ===== -->
+    <section class="cs-block" id="solution">
+      <header class="cs-block__head">
+        <span class="cs-block__no">09</span>
+        <h2 class="cs-block__title">the sol<em>u</em>tion<span class="cs-block__spark">✦</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <div class="int-solution-content">
+
+        <!-- Homepage -->
+        <div class="int-sol-hp">
+          <img class="avatar-shot" src="images/sol-hp-img.png" alt="Homepage screen mockup" />
+          <div class="int-sol-hp__text">
+            <h3>intueative!</h3>
+            <div>
+              <h4 style="font-family:var(--serif); font-weight:700; font-size:24px; margin:0 0 4px;">Homepage</h4>
+              <p style="margin:0; font-size:24px;">A bento-style dashboard with all features visible at a glance. Luna sits at the top and stays visible across the app.</p>
+            </div>
+            <div class="int-sol-mascot">
+              <img src="images/sol-luna-img2.png" alt="Luna heart mascot" />
+              <span>our mascot Luna!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Journal - New Entry -->
+        <div class="int-sol-feature">
+          <div class="int-sol-images-row">
+            <img src="images/sol-fjnew1.png" alt="New Entry screen 1" />
+            <img src="images/sol-fjnew2.png" alt="New Entry screen 2" />
+            <img src="images/sol-fjnew3.png" alt="New Entry screen 3" />
+          </div>
+          <div style="text-align:center;">
+            <h3 style="margin:0;">Food Journal - New Entry</h3>
+            <p class="int-sol-feature__tagline">The awareness of journaling, without the weight of it.</p>
+            <p class="body" style="text-align:left; margin-top:16px;">Users log meals in whichever form feels lightest — a photo, a voice note, or a quick text — capturing hunger and fullness on the 1–10 scale IE dietitians actually use. Research kept surfacing the same tension: journaling is one of the most valuable IE practices, yet the one people abandon fastest. The problem was never the practice, it was the tools — so this flow keeps only what supports awareness.</p>
+          </div>
+        </div>
+
+        <!-- Food Journal -->
+        <div class="int-sol-feature__main">
+          <div class="int-sol-images-row" style="flex-direction:row; width:auto;">
+            <img class="hero-shot" src="images/sol-fj1.png" alt="Food Journal screen 1" />
+            <img class="hero-shot" src="images/sol-fj2.png" alt="Food Journal screen 2" />
+          </div>
+          <div class="int-sol-feature__text">
+            <h3>Food Journal</h3>
+            <p class="int-sol-feature__tagline">A record you can look back at, not one that looks back at you.</p>
+            <p class="body">Past entries are collapsed by default and organized by week. Users can tap any day to expand it and see the photo, hear the voice note, or read what was written. Research showed that most food journaling tools eventually feel like surveillance, so this weekly view was designed as neutral space you can revisit on your own terms.</p>
+          </div>
+        </div>
+
+        <!-- Compassionate Companion - Luna -->
+        <div class="int-sol-feature">
+          <div class="int-sol-feature__main">
+            <div class="int-sol-images-row" style="flex-direction:row; width:auto;">
+              <img class="hero-shot" src="images/sol-cc1.png" alt="Luna companion screen 1" />
+              <img class="hero-shot" src="images/sol-cc2.png" alt="Luna companion screen 2" />
+            </div>
+            <div class="int-sol-feature__text">
+              <h3>Compassionate Companion - Luna!</h3>
+              <p class="int-sol-feature__tagline">A warm, compassionate companion for when things get hard.</p>
+              <p class="body">Luna is an AI companion for the moments doubt, guilt, or a hard meal shows up and there's no one to reach out to. Users can type freely, or start from a guided entry point drawn from research. The strongest interview finding was the most human: what helped most was a compassionate witness, modeled on how IE dietitians actually speak. Luna makes that voice available without pretending to replace the relationship it grew from.</p>
+            </div>
+          </div>
+          <div class="int-sol-images-row int-sol-images-row--dim">
+            <img src="images/sol-cc3.png" alt="Luna companion screen 3" />
+            <img src="images/sol-cc4.png" alt="Luna companion screen 4" />
+            <img src="images/sol-cc5.png" alt="Luna companion screen 5" />
+            <img src="images/sol-cc6.png" alt="Luna companion screen 6" />
+          </div>
+        </div>
+
+        <!-- Care Kit -->
+        <div class="int-sol-feature">
+          <div class="int-sol-feature__main">
+            <img class="hero-shot hero-shot--lg" src="images/sol-carekit-img.png" alt="Care Kit main screen" />
+            <div class="int-sol-feature__text">
+              <h3>Care Kit</h3>
+              <p class="int-sol-feature__tagline">Eating to soothe is valid. So is choosing something else.</p>
+              <p class="body">Care Kit is a small in-app space for the moments users reach for food not out of hunger, but out of something else. It opens with permission — eating to soothe is a legitimate way to cope — then offers a few gentle alternatives to explore: a grounding exercise, a short breath, a walk, a message to someone. Research showed two groups hiding in the same theme, some already at peace with emotional eating, others still trapped in guilt — so Care Kit validates the impulse first, offers alternatives second, and never judges.</p>
+            </div>
+          </div>
+          <div class="int-sol-images-row">
+            <img src="images/sol-ck1.png" alt="Care Kit screen 1" />
+            <img src="images/sol-ck2.png" alt="Care Kit screen 2" />
+            <img src="images/sol-ck3.png" alt="Care Kit screen 3" />
+            <img src="images/sol-ck4.png" alt="Care Kit screen 4" />
+            <img src="images/sol-ck5.png" alt="Care Kit screen 5" />
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="int-sol-feature">
+          <div class="int-sol-feature__main">
+            <img class="hero-shot hero-shot--lg" src="images/sol-achievements-img.png" alt="Achievements main screen" />
+            <div class="int-sol-feature__text">
+              <h3>Achievements</h3>
+              <p class="int-sol-feature__tagline">Progress that a scale would never catch.</p>
+              <p class="body">Achievements logs the wins intuitive eating actually produces: noticing fullness for the first time in years, a self-compassion moment after a hard meal, recognizing emotional eating without spiraling, asking for what you want on a menu. Most progress in IE is invisible by diet culture's standards: no weight to celebrate, no streak to protect, no before-and-after. Users forget how far they've come, and that forgetting is exactly what diet culture exploits; so <strong>Achievements makes the invisible visible</strong>, on the user's own terms.</p>
+            </div>
+          </div>
+          <div class="int-sol-images-row">
+            <img src="images/sol-achievements1.png" alt="Achievements screen 1" />
+            <img src="images/sol-achievements2.png" alt="Achievements screen 2" />
+            <img src="images/sol-achievements3.png" alt="Achievements screen 3" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 10 REFLECTIONS ===== -->
+    <section class="cs-block" id="reflections">
+      <header class="cs-block__head">
+        <span class="cs-block__no">10</span>
+        <h2 class="cs-block__title">refle<em>c</em>tions<span class="cs-block__spark">✦</span></h2>
+        <span class="cs-block__rule"></span>
+      </header>
+
+      <div style="display:flex; gap:48px; flex-wrap:wrap;">
+        <div style="flex:1 1 400px; display:flex; flex-direction:column; gap:8px;">
+          <h3 style="font-family:var(--serif); font-weight:700; font-size:24px; margin:0;">What I'd do differently</h3>
+          <p style="margin:0;"><strong style="font-weight:700; font-style:normal;">I didn't run usability tests with the final designs.</strong> Given the timeline of the project, testing was deprioritized. If I did this again, I would bring at least two or three of the original interview participants back to test the food journal flow specifically. That's the feature that is most emotionally loaded, and the most vulnerable to subtle wording mistakes.</p>
+          <p style="margin:0;"><strong style="font-weight:700; font-style:normal;">I'd also revisit Luna.</strong> Designing an AI companion in a space adjacent to mental health carries real risk, and looking back, I'd want to explore a different direction: <strong>replacing Luna with an IE community tab — a space where practitioners could support each other directly</strong>. The "compassionate witness" doesn't have to be artificial. In fact, it might be more powerful when it isn't. A community-led model would also address another finding from research: the isolation users feel when the people around them don't understand IE. One feature, two insights served!</p>
+        </div>
+        <div style="flex:1 1 350px; display:flex; flex-direction:column; gap:12px; align-items:center;">
+          <div style="width:100%;">
+            <h3 style="font-family:var(--serif); font-weight:700; font-size:24px; margin:0 0 4px;">What this project taught me</h3>
+            <p style="margin:0;">Coming from a Social Psychology background, I'm used to studying behavior. This project taught me that designing for behavior change asks for the same rigor, and something more that data alone can't supply: Empathy, restraint, and a willingness to leave things out.</p>
+          </div>
+          <img src="images/int-luna-heart.png" alt="Luna heart mascot illustration" style="width:280px;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="block contact" id="contact" data-tone="violet">
+      <header class="block__head">
+        <h2 class="block__title">con<em>t</em>act <span class="block__spark">✦</span></h2>
+        <span class="block__rule"></span>
+      </header>
+
+      <div class="contact__row">
+        <p class="contact__prompt">If you have any thoughts on my project or would like to collaborate, let's chat!</p>
+        <div class="contact__options">
+          <div class="contact__pills">
+            <button class="contact-pill js-copy-email" data-email="ecesa.design@gmail.com">
+              <span>ecesa.design@gmail.com</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11C21 10.4477 20.5523 10 20 10H11C10.4477 10 10 10.4477 10 11V20C10 20.5523 10.4477 21 11 21H20C20.5523 21 21 20.5523 21 20V11ZM14 5V4C14 3.73478 13.8946 3.48051 13.707 3.29297C13.5195 3.10543 13.2652 3 13 3H4C3.73478 3 3.4805 3.10543 3.29297 3.29297C3.10543 3.4805 3 3.73478 3 4V13C3 13.2652 3.10543 13.5195 3.29297 13.707C3.48051 13.8946 3.73478 14 4 14H5C5.55228 14 6 14.4477 6 15C6 15.5523 5.55228 16 5 16H4C3.20435 16 2.44151 15.6837 1.87891 15.1211C1.3163 14.5585 1 13.7956 1 13V4C1 3.20435 1.3163 2.44152 1.87891 1.87891C2.44152 1.3163 3.20435 1 4 1H13C13.7956 1 14.5585 1.3163 15.1211 1.87891C15.6837 2.44151 16 3.20435 16 4V5C16 5.55228 15.5523 6 15 6C14.4477 6 14 5.55228 14 5ZM23 20C23 21.6569 21.6569 23 20 23H11C9.34315 23 8 21.6569 8 20V11C8 9.34315 9.34315 8 11 8H20C21.6569 8 23 9.34315 23 11V20Z" fill="currentColor"/></svg>
+            </button>
+            <a class="contact-pill" href="https://www.linkedin.com/in/ece-saglam/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="contact-pill" href="https://behance.net/ecesa" target="_blank" rel="noopener">
+              <span>Behance</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 19V8C2 7.20435 2.3163 6.44152 2.87891 5.87891C3.44152 5.3163 4.20435 5 5 5H11C11.5523 5 12 5.44772 12 6C12 6.55228 11.5523 7 11 7H5C4.73478 7 4.4805 7.10543 4.29297 7.29297C4.10543 7.4805 4 7.73478 4 8V19C4 19.2652 4.10543 19.5195 4.29297 19.707C4.48051 19.8946 4.73478 20 5 20H16C16.2652 20 16.5195 19.8946 16.707 19.707C16.8946 19.5195 17 19.2652 17 19V13C17 12.4477 17.4477 12 18 12C18.5523 12 19 12.4477 19 13V19C19 19.7957 18.6837 20.5585 18.1211 21.1211C17.5585 21.6837 16.7956 22 16 22H5C4.20435 22 3.44151 21.6837 2.87891 21.1211C2.3163 20.5585 2 19.7956 2 19ZM22 9C22 9.55228 21.5523 10 21 10C20.4477 10 20 9.55228 20 9V5.41406L10.707 14.707C10.3165 15.0976 9.68349 15.0976 9.29297 14.707C8.90244 14.3165 8.90244 13.6835 9.29297 13.293L18.5859 4H15C14.4477 4 14 3.55228 14 3C14 2.44772 14.4477 2 15 2H21C21.5523 2 22 2.44772 22 3V9Z" fill="currentColor"/></svg>
+            </a>
+          </div>
+          <span class="contact__note">say hi :)</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>© 2026 Ece Sağlam · made slowly, on purpose</span>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">copied ✦</div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

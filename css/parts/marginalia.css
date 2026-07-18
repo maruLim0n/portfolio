@@ -1,0 +1,60 @@
+/* Marginalia: handwritten red notes + sketchy SVG arrows. */
+
+/* --- margin notes (positioned absolute by default; .margin-note--inline opts in to flow) --- */
+.margin-note {
+  position: absolute;
+  font-family: var(--script);
+  color: var(--cherry);
+  font-size: 22px;
+  line-height: 1.1;
+  transform: rotate(-6deg);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+.margin-note::before {
+  content: "";
+  position: absolute;
+  width: 28px; height: 18px;
+  border-left: 1.2px solid var(--cherry);
+  border-bottom: 1.2px solid var(--cherry);
+  border-bottom-left-radius: 50%;
+  left: -36px; top: 8px;
+  transform: rotate(20deg);
+}
+.margin-note--inline {
+  position: static;
+  display: inline-block;
+  margin-left: 8px;
+}
+.margin-note--inline::before { display: none; }
+
+/* --- sketchy hand-drawn arrows (SVG paths drawn via stroke-dashoffset) --- */
+.arrow {
+  position: absolute;
+  pointer-events: none;
+  overflow: visible;
+  color: var(--cherry);
+  z-index: 4;
+}
+.arrow path,
+.arrow polyline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: var(--len, 600);
+  stroke-dashoffset: var(--len, 600);
+  transition: stroke-dashoffset 1.4s var(--ease);
+}
+.is-in .arrow path,
+.is-in .arrow polyline {
+  stroke-dashoffset: 0;
+}
+.arrow--d1 path { transition-delay: .25s; }
+.arrow--d2 path { transition-delay: .55s; }
+.arrow--d3 path { transition-delay: .85s; }
+.arrow--violet  { color: var(--violet); }
+.arrow--leaf    { color: var(--leaf); }
+.arrow--mustard { color: var(--mustard); }
