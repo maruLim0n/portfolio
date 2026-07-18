@@ -104,17 +104,17 @@
 .sg-playit {
   background: #d9d9d9;
   border-radius: 4px;
-  height: 463px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 1080px;
+  aspect-ratio: 1383 / 826;
   margin-top: 32px;
+  overflow: hidden;
 }
-.sg-playit p {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: 24px;
-  color: var(--ink-mute);
+.sg-playit__frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
 /* pixel-art assets: keep crisp edges when scaled up, don't let the browser smooth/blur them */
