@@ -186,6 +186,7 @@
 .int-reddit-crop {
   position: relative;
   height: 80px;
+  max-width: 100%;
   border: 2px solid var(--leaf);
   border-radius: 17px;
   overflow: hidden;
@@ -316,8 +317,8 @@
 .int-solution-content { display: flex; flex-direction: column; gap: 80px; width: 100%; align-items: center; }
 .int-sol-feature { width: 100%; display: flex; flex-direction: column; gap: 40px; }
 .int-sol-feature__main { display: flex; gap: 40px; align-items: center; }
-.int-sol-feature__main img.hero-shot { width: 257px; height: auto; border-radius: 4px; flex-shrink: 0; object-fit: cover; }
-.int-sol-feature__main img.hero-shot--lg { width: 510px; }
+.int-sol-feature__main img.hero-shot { width: 257px; max-width: 100%; height: auto; border-radius: 4px; flex-shrink: 0; object-fit: cover; }
+.int-sol-feature__main img.hero-shot--lg { width: 510px; max-width: 100%; }
 .int-sol-feature__text { flex: 1; display: flex; flex-direction: column; gap: 24px; }
 .int-sol-feature__text h3 { font-family: var(--serif); font-weight: 700; font-size: 24px; margin: 0; }
 .int-sol-feature__tagline { font-family: var(--serif); font-size: 22px; margin: 0; }

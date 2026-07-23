@@ -8,13 +8,17 @@
 }
 .pg-preview__grid {
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: clamp(12px, 3vw, 32px);
   justify-content: center;
   width: 100%;
 }
 .pg-preview__grid img {
-  width: 358px;
-  height: 358px;
+  flex: 1 1 220px;
+  max-width: 358px;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 1px solid var(--ink-soft);
   border-radius: 2px;

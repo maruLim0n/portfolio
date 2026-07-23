@@ -50,6 +50,33 @@
   color: var(--cream);
 }
 
+/* --- mobile nav hamburger toggle (hidden ≥761px, see responsive.css) --- */
+.nav-bar__toggle {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  border: 1.4px solid var(--ink);
+  border-radius: 42px;
+  background: var(--cream);
+  transition: background .25s var(--ease);
+}
+.nav-bar__toggle-bar {
+  width: 20px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform .25s var(--ease), opacity .2s var(--ease), background .25s var(--ease);
+}
+.nav-bar__toggle.is-open { background: var(--violet); }
+.nav-bar__toggle.is-open .nav-bar__toggle-bar { background: var(--cream); }
+.nav-bar__toggle.is-open .nav-bar__toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-bar__toggle.is-open .nav-bar__toggle-bar:nth-child(2) { opacity: 0; }
+.nav-bar__toggle.is-open .nav-bar__toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* room for the fixed topbar + nav bar above the page content */
 .page { padding-top: 160px; }
 

@@ -66,8 +66,9 @@
 }
 .cs-hero__mockup {
   flex-shrink: 0;
-  width: 349px;
-  height: 359px;
+  width: clamp(180px, 28vw, 349px);
+  aspect-ratio: 349 / 359;
+  height: auto;
 }
 .cs-hero__mockup img { width: 100%; height: 100%; object-fit: contain; }
 
@@ -114,6 +115,8 @@
 .cs-block__head {
   display: flex;
   align-items: end;
+  flex-wrap: wrap;
+  row-gap: 8px;
   gap: 24px;
   margin-bottom: 32px;
 }
@@ -121,16 +124,17 @@
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: 64px;
+  font-size: clamp(28px, 7vw, 64px);
   line-height: 0.9;
   color: var(--violet);
 }
 .cs-block__title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: 64px;
+  font-size: clamp(28px, 7vw, 64px);
   line-height: 0.9;
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 4px;
   margin: 0;
@@ -140,7 +144,7 @@
   font-weight: 400;
   color: var(--violet);
 }
-.cs-block__spark { font-size: 24px; margin-left: 4px; color: var(--violet); }
+.cs-block__spark { font-size: clamp(14px, 3vw, 24px); margin-left: 4px; color: var(--violet); }
 .cs-block__rule {
   flex: 1;
   height: 1.4px;

@@ -21,10 +21,11 @@
 
 /* --- block 1: seagull/cat pairing --- */
 .pg-block--1 { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
-.pg-block--1 .pg-pair { display: flex; align-items: center; gap: 17px; }
+.pg-block--1 .pg-pair { display: flex; align-items: center; gap: 17px; flex-wrap: wrap; }
 .pg-tall-frame img {
-  height: 429px;
+  height: clamp(220px, 39vw, 429px);
   width: auto;
+  max-width: 100%;
   border: 1px solid var(--ink-soft);
   object-fit: cover;
 }
@@ -34,12 +35,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  height: 429px;
-  width: 314px;
+  min-height: clamp(220px, 39vw, 429px);
+  width: clamp(160px, 28.5vw, 314px);
 }
 .pg-stack img {
-  width: 314px;
-  height: 314px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 1px solid var(--ink-soft);
 }
@@ -47,6 +49,7 @@
   display: flex;
   align-items: flex-end;
   gap: 4px;
+  flex-wrap: wrap;
 }
 .pg-note-group img.pg-arrow { width: 150px; height: auto; }
 
@@ -65,31 +68,37 @@
   justify-content: space-between;
   gap: 16px;
 }
-.pg-cal-col img { width: 255px; height: 362px; object-fit: cover; }
+.pg-cal-col img { width: clamp(140px, 24vw, 255px); height: auto; aspect-ratio: 255 / 362; object-fit: cover; }
 .pg-cat-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 6px;
-  width: 793px;
+  flex: 1 1 320px;
+  width: 100%;
+  max-width: 793px;
+  min-width: 0;
 }
 .pg-cat-grid img { width: 100%; height: 100%; aspect-ratio: 1; object-fit: cover; }
 
 /* --- block 3: worm pattern + icon grid --- */
 .pg-block--3 { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
-.pg-block--3 img.pg-solucan { width: 614px; height: 434px; object-fit: cover; }
+.pg-block--3 img.pg-solucan { width: clamp(240px, 57vw, 614px); height: auto; aspect-ratio: 614 / 434; object-fit: cover; }
 .pg-icon-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  width: 434px;
+  flex: 1 1 220px;
+  width: 100%;
+  max-width: 434px;
+  min-width: 0;
 }
-.pg-icon-grid img { width: 214px; height: 214px; object-fit: cover; }
+.pg-icon-grid img { flex: 1 1 90px; max-width: 214px; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
 
 /* --- block 4: tomato branding --- */
 .pg-block--4 .pg-caption { margin-bottom: 15px; display: block; }
-.pg-block--4 .pg-row { position: relative; display: flex; gap: 19px; align-items: center; }
-.pg-block--4 img.pg-square { width: 216px; height: 216px; flex-shrink: 0; object-fit: cover; border: 1px solid var(--ink-soft); }
-.pg-block--4 img.pg-banner { flex: 1 1 0; min-width: 0; width: auto; height: 216px; border: 1px solid var(--ink-soft); object-fit: cover; }
+.pg-block--4 .pg-row { position: relative; display: flex; gap: 19px; align-items: center; flex-wrap: wrap; }
+.pg-block--4 img.pg-square { flex: 0 1 216px; min-width: 0; width: 100%; max-width: 216px; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid var(--ink-soft); }
+.pg-block--4 img.pg-banner { flex: 1 1 0; min-width: 0; width: auto; height: auto; aspect-ratio: 1400 / 350; border: 1px solid var(--ink-soft); object-fit: cover; }
 .pg-block--4 .pg-arrow-side-wrap {
   position: absolute;
   left: -70px;
@@ -111,13 +120,13 @@
 
 /* --- block 5: open mic poster + turtle/duck --- */
 .pg-block--5 { display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap; position: relative; }
-.pg-block--5 img.pg-poster { width: 314px; height: 444px; object-fit: cover; }
-.pg-block--5 img.pg-wide { width: 734px; height: 271px; object-fit: cover; }
+.pg-block--5 img.pg-poster { flex: 0 1 314px; min-width: 0; width: auto; max-width: 314px; height: auto; aspect-ratio: 314 / 444; object-fit: cover; }
+.pg-block--5 img.pg-wide { flex: 1 1 300px; min-width: 0; width: auto; max-width: 734px; height: auto; aspect-ratio: 734 / 271; object-fit: cover; }
 .pg-block--5 .pg-note-group { position: absolute; left: 341px; top: 306px; }
 
 /* --- block 6: cat photo pairing --- */
 .pg-block--6 { display: flex; gap: 32px; align-items: flex-end; flex-wrap: wrap; }
-.pg-block--6 img { height: 422px; width: auto; object-fit: cover; }
+.pg-block--6 img { height: clamp(220px, 39vw, 422px); width: auto; max-width: 100%; object-fit: cover; }
 
 /* --- shared: handwritten captions & arrows --- */
 .pg-caption {
@@ -128,4 +137,4 @@
   text-align: center;
 }
 .pg-caption--lg { font-size: 32px; }
-.pg-note-group .pg-caption { width: 210px; text-align: center; }
+.pg-note-group .pg-caption { width: 100%; max-width: 210px; text-align: center; }

@@ -3,8 +3,8 @@
 
 .avatar-stack {
   position: relative;
-  width: 239px;
-  height: 277px;
+  width: clamp(160px, 21vw, 239px);
+  height: clamp(186px, 24.4vw, 277px);
 }
 .avatar-stack::before {
   content: "";
@@ -34,8 +34,8 @@
   position: relative;
   z-index: 2;
   margin: 0;
-  width: 239px;
-  height: 277px;
+  width: clamp(160px, 21vw, 239px);
+  height: clamp(186px, 24.4vw, 277px);
   background: var(--accent);
   border: 1.4px solid var(--ink);
   border-radius: 18px;

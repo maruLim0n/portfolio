@@ -81,8 +81,9 @@
 
 .proj__mockup {
   flex-shrink: 0;
-  width: 349px;
-  height: 359px;
+  width: clamp(180px, 28vw, 349px);
+  aspect-ratio: 349 / 359;
+  height: auto;
   border-radius: 4px;
   overflow: hidden;
 }

@@ -1,11 +1,84 @@
-/* Breakpoints. Keep responsive overrides in one place. */
+/* Breakpoints. Keep responsive overrides in one place.
+   Tiers (reused by every page — do not add new breakpoint values elsewhere):
+     - default        : ≥1081px, desktop, 1320px/1080px-column Figma baseline
+     - max-width:1080px: tablet — .page/.nav-bar side padding shrinks, decorations pull in
+     - max-width:760px : phone — grids stack 1-col, nav becomes a hamburger dropdown
+   New pages (playground/work/work-shellgame) should add their selectors into
+   these same two blocks, not new media queries. */
 
 @media (max-width: 1080px) {
   .page { padding: 80px 56px 60px; }
+  .nav-bar { padding: 0 56px; }
+  .hello { grid-template-columns: clamp(160px, 21vw, 239px) 1fr; gap: 24px; }
+  .deco--star { right: -16px; }
+  .contact__row { flex-wrap: wrap; row-gap: 16px; }
+
+  /* pg-block--4/5 decorative arrows bleed outside their container's box
+     (negative left offset / absolute position anchored to the desktop
+     unwrapped layout) — page padding shrinks below their offsets and the
+     row wraps starting at this tier, so hide rather than reflow them. */
+  .pg-block--4 .pg-arrow-side-wrap { display: none; }
+  .pg-block--5 .pg-note-group { display: none; }
+
+  /* case-study hero (shared by work.html + work-shellgame.html): the
+     729px info column + 349px mockup + 40px gap overflow above this
+     tier already, so stack here rather than waiting for the phone tier */
+  .cs-hero { flex-direction: column; align-items: flex-start; gap: 32px; }
+  .cs-hero__mockup { align-self: center; }
+
+  /* Intueative jump-to nav: 5 auto-sized nowrap columns don't fit a
+     narrower content column, so drop to 2 columns here (3 rows) */
+  .cs-jumpto__grid { grid-template-columns: repeat(2, auto); gap: 24px 32px; }
+
+  /* Intueative analysis/insights + quote grids: 3/4 columns get too
+     cramped below desktop width */
+  .int-themes-grid { grid-template-columns: repeat(2, 1fr); }
+  .int-quotes { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 760px) {
-  .page { padding: 64px 24px 48px; }
+  .page { padding: 96px 24px 48px; }
+
+  /* declutter the gallery on phones: drop the arrow+caption note pairs,
+     keep plain standalone captions (no attached arrow) visible */
+  .pg-block--1 .pg-note-group--right { display: none; }
+
+  /* long project titles ("Shell Game, Reimagined") were forced onto one
+     unbreakable line and ran off-screen; let them wrap normally */
+  .proj__title { white-space: normal; align-items: baseline; }
+
+  /* playground gallery on phones: one image per row, full width, centered */
+  .pg-block--1,
+  .pg-block--1 .pg-pair,
+  .pg-block--2,
+  .pg-block--3,
+  .pg-block--4 .pg-row,
+  .pg-block--5,
+  .pg-block--6 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* icon grid stays a 2x2 grid on phones instead of stacking single-file */
+  .pg-icon-grid { flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .pg-icon-grid img { flex: 1 1 calc(50% - 6px); max-width: calc(50% - 6px); height: auto; }
+
+  .pg-tall-frame img,
+  .pg-stack,
+  .pg-cal-col img,
+  .pg-block--3 img.pg-solucan,
+  .pg-block--4 img.pg-square,
+  .pg-block--4 img.pg-banner,
+  .pg-block--5 img.pg-poster,
+  .pg-block--5 img.pg-wide,
+  .pg-block--6 img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex: none;
+  }
+
+  .pg-cat-grid { grid-template-columns: 1fr; }
 
   .hello { grid-template-columns: 1fr; gap: 28px; margin-bottom: 60px; }
   .hello--sub { grid-template-columns: 1fr; }
@@ -28,12 +101,64 @@
 
   .block { margin-top: 64px; }
   .play { grid-template-columns: 1fr; column-gap: 0; }
-  .proj { grid-template-columns: 40px 1fr; gap: 12px 18px; }
-  .proj__name, .proj__tag, .proj__meta, .proj__cta { grid-column: 2; }
-  .cv__row { grid-template-columns: 1fr; gap: 4px; }
 
-  .topbar::before { display: none; }
+  .proj__top { flex-direction: column; align-items: stretch; gap: 20px; }
+  .proj__mockup { width: 100%; max-width: 100%; }
+
+  .proj-loading { flex-direction: column; text-align: center; padding: 0 16px; }
+  .proj-loading__text { white-space: normal; font-size: clamp(16px, 4.5vw, 22px); text-align: center; }
+
+  .pg-preview__grid img { flex-basis: 100%; max-width: 320px; }
+
+  .contact__row { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .contact__prompt { max-width: 100%; }
+  .contact__options { flex-wrap: wrap; }
+  .contact__pills { flex-wrap: wrap; }
+
   .margin-note:not(.margin-note--inline) { display: none; }
   .arrow { display: none; }
   .avatar-stamp { transform: rotate(8deg) scale(.75); top: -6px; right: -8px; }
+
+  /* --- mobile nav dropdown --- */
+  .nav-bar { padding: 0 24px; }
+  .nav-bar__toggle { display: flex; }
+  .nav-bar__links {
+    position: absolute;
+    top: 100%; right: 0; left: 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 12px;
+    background: var(--cream);
+    border: 1.4px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: 4px 4px 0 var(--ink);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height .3s var(--ease), opacity .2s var(--ease);
+  }
+  .nav-bar__links.is-open { max-height: 320px; opacity: 1; pointer-events: auto; }
+  .nav-bar__link { text-align: center; }
+
+  .cs-jumpto__grid { grid-template-columns: 1fr; gap: 20px; }
+  .cs-jumpto__item { white-space: normal; }
+
+  .int-themes-grid { grid-template-columns: 1fr; }
+  .int-quotes { grid-template-columns: 1fr; }
+
+  /* Intueative solution section: fixed-size mockup rows next to text,
+     no wrap today — stack everything on phones */
+  .int-sol-feature__main { flex-direction: column; align-items: stretch; gap: 24px; }
+  .int-sol-feature__main img.hero-shot,
+  .int-sol-feature__main img.hero-shot--lg { width: 100%; max-width: 349px; margin: 0 auto; }
+
+  .int-sol-images-row { flex-wrap: wrap; }
+  .int-sol-images-row img { flex: 0 1 140px; }
+
+  .int-sol-hp { flex-direction: column; text-align: center; gap: 24px; }
+  .int-sol-hp img.avatar-shot { width: min(220px, 60vw); margin: 0 auto; }
+  .int-sol-hp__text { max-width: 100%; text-align: left; }
 }

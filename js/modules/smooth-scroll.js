@@ -1,5 +1,8 @@
 /* Smooth-scroll for in-page anchors, with an offset clearing the fixed topbar + nav bar. */
 
+// OFFSET accounts for the fixed topbar (19px) + nav-bar (60px) = 79px.
+// Both stay constant across breakpoints (mobile nav reuses the same 60px bar
+// height for its hamburger button) — if either height ever changes, update this.
 const OFFSET = 100;
 
 export const initSmoothScroll = () => {
