@@ -47,6 +47,13 @@
      unbreakable line and ran off-screen; let them wrap normally */
   .proj__title { white-space: normal; align-items: baseline; }
 
+  /* Shell Game process section: credit/witch image rows (5 and 4 fixed-
+     height images respectively) have no wrap anywhere in the chain and
+     need ~700px+ minimum width — stack caption below the image row,
+     and let the row itself wrap if still needed at very narrow widths */
+  .cs-credit-row, .cs-witch-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .cs-credit-row__images, .cs-witch-row__images { flex-wrap: wrap; }
+
   /* playground gallery on phones: one image per row, full width, centered */
   .pg-block--1,
   .pg-block--1 .pg-pair,

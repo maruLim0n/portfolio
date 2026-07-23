@@ -12,12 +12,14 @@
   display: flex;
   gap: 21px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .sg-brief-how__shot {
   border: 2px dashed var(--violet);
   border-radius: 10px;
   padding: 18px;
   width: 355px;
+  max-width: 100%;
 }
 .sg-brief-how__shot img { width: 100%; height: auto; display: block; object-fit: cover; }
 .sg-brief-how__qmark {
@@ -87,6 +89,7 @@
   align-items: center;
   gap: 16px;
   width: 251px;
+  max-width: 100%;
 }
 .sg-shuffle__label {
   font-family: "Pixelify Sans", var(--ui);
